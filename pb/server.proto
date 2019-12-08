@@ -33,6 +33,6 @@ message ResponseDiscount {
    Discount discount = 1 ;
 }
 
-service HostGrpcAPi {
+service HashGrpcAPi {
   rpc getDiscount(RequestDiscount) returns (ResponseDiscount) {}
 }
