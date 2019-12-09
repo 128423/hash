@@ -2,10 +2,11 @@
 
 
 [[projects]]
-  digest = "1:f5ce1529abc1204444ec73779f44f94e2fa8fcdb7aca3c355b0c95947e4005c6"
+  digest = "1:7ade0e7351787347d3dd3456abb365fd71ea75c19a859505e6a427064e1f9e42"
   name = "github.com/golang/protobuf"
   packages = [
     "proto",
+    "protoc-gen-go/descriptor",
     "ptypes",
     "ptypes/any",
     "ptypes/duration",
@@ -72,7 +73,7 @@
   revision = "0243a4be9c8f1264d238fdc2895620b4d9baf9e1"
 
 [[projects]]
-  digest = "1:b59ce3ddb11daeeccccc9cb3183b58ebf8e9a779f1c853308cd91612e817a301"
+  digest = "1:24c7bbb52f35264c506e5d404a257408937953cab7f39b898bd7edde0103b52a"
   name = "google.golang.org/grpc"
   packages = [
     ".",
@@ -105,6 +106,8 @@
     "metadata",
     "naming",
     "peer",
+    "reflection",
+    "reflection/grpc_reflection_v1alpha",
     "resolver",
     "serviceconfig",
     "stats",
@@ -123,6 +126,7 @@
     "github.com/golang/protobuf/ptypes/timestamp",
     "google.golang.org/grpc",
     "google.golang.org/grpc/codes",
+    "google.golang.org/grpc/reflection",
     "google.golang.org/grpc/status",
   ]
   solver-name = "gps-cdcl"

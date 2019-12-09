@@ -1,2 +1,4 @@
 vendor
-service2/node_modules
+client/node_modules
+volumes
+mongo/data
