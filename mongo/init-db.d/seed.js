@@ -29,7 +29,7 @@ db.products.insertMany([
     }
   },
   {
-    _id: 1,
+    _id: 2,
     price_in_cents: 1000,
     title: "Bomba",
     description: "Fiat 147, vai quebrar",
