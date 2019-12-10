@@ -3,6 +3,7 @@ package controllers
 import (
 	"context"
 	"errors"
+	"log"
 	"time"
 
 	"github.com/128423/hash/server/database"
@@ -18,6 +19,7 @@ func (s *Server) GetDiscount(ctx context.Context, req *pb.RequestDiscount) (*pb.
 		return nil, errors.New("User not found")
 	}
 	product, err := database.GetProduct(req.GetProductId())
+	log.Println(product, err)
 	if err != nil {
 		return nil, errors.New("Product not found")
 	}

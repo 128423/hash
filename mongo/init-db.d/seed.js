@@ -25,7 +25,7 @@ db.products.insertMany([
     description: "Marea turbo, ta pegando fogo meu",
     discount: {
       pct: 7.5,
-      value_in_cents: 7.5
+      value_in_cents: 7
     }
   },
   {
@@ -35,7 +35,7 @@ db.products.insertMany([
     description: "Fiat 147, vai quebrar",
     discount: {
       pct: 7.5,
-      value_in_cents: 75.0
+      value_in_cents: 75
     }
   }
 ]);
