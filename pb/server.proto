@@ -7,28 +7,28 @@ package products;
 option go_package = "pb";
 
 message User {
-  string id = 1;
+  int64 id = 1;
   string first_name = 2;
   string last_name = 3;
   google.protobuf.Timestamp date_of_birth = 4;
 }
 
 message Discount {
-  float percent = 1;
+  float pct = 1;
   int64 value_in_cents = 2;
 }
 
 message Product {
-  string id = 1;
-  int32 price_in_cents = 2;
+  int64 id = 1;
+  int64 price_in_cents = 2;
   string title = 3;
   string description = 4;
   Discount discount = 5;
 }
 
 message RequestDiscount {
-  string product_id = 1;
-  string user_id = 2 ;
+  int64 product_id = 1;
+  int64 user_id = 2 ;
 }
 
 message ResponseDiscount {

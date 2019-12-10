@@ -34,7 +34,7 @@ db.products.insertMany([
     title: "Bomba",
     description: "Fiat 147, vai quebrar",
     discount: {
-      pct: 75.0,
+      pct: 7.5,
       value_in_cents: 75.0
     }
   }
