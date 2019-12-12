@@ -1,1 +1,2 @@
-protoc ./pb/server.proto --go_out=plugins=grpc:./server/
+# protoc ./pb/server.proto --go_out=plugins=grpc:./server/
+grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./client/ --grpc_out=./client/ --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` ./pb/server.proto
