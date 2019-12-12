@@ -3,7 +3,6 @@ package controllers
 import (
 	"context"
 	"errors"
-	"log"
 	"time"
 
 	"github.com/128423/hash/server/database"
@@ -19,17 +18,18 @@ func (s *Server) GetDiscount(ctx context.Context, req *pb.RequestDiscount) (*pb.
 		return nil, errors.New("User not found")
 	}
 	product, err := database.GetProduct(req.GetProductId())
-	log.Println(product, err)
 	if err != nil {
 		return nil, errors.New("Product not found")
 	}
 	t := time.Now()
 
-	if User.DateBirth.Day() == t.Day() && User.DateBirth.Month() == t.Month() {
+	if t.Day() == 25 && t.Month() == time.November {
+		product.Discount.Ptc = 10.0
+		product.Discount.ValueInCents = int64(float64(product.PriceCents) * 0.10)
+	} else if User.DateBirth.Day() == t.Day() && User.DateBirth.Month() == t.Month() {
 		product.Discount.Ptc = 5.0
 		product.Discount.ValueInCents = int64(float64(product.PriceCents) * 0.05)
 	}
-
 	return &pb.ResponseDiscount{
 		Discount: &pb.Discount{
 			Pct:          product.Discount.Ptc,
