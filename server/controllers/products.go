@@ -29,7 +29,11 @@ func (s *Server) GetDiscount(ctx context.Context, req *pb.RequestDiscount) (*pb.
 	} else if User.DateBirth.Day() == t.Day() && User.DateBirth.Month() == t.Month() {
 		product.Discount.Ptc = 5.0
 		product.Discount.ValueInCents = int64(float64(product.PriceCents) * 0.05)
+	} else {
+		product.Discount.Ptc = 3.0
+		product.Discount.ValueInCents = int64(float64(product.PriceCents) * 0.03)
 	}
+
 	return &pb.ResponseDiscount{
 		Discount: &pb.Discount{
 			Pct:          product.Discount.Ptc,

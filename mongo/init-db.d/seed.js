@@ -23,19 +23,11 @@ db.products.insertMany([
     price_in_cents: 100,
     title: "Carro",
     description: "Marea turbo, ta pegando fogo meu",
-    discount: {
-      pct: 7.5,
-      value_in_cents: 7
-    }
   },
   {
     _id: 2,
     price_in_cents: 1000,
     title: "Bomba",
     description: "Fiat 147, vai quebrar",
-    discount: {
-      pct: 7.5,
-      value_in_cents: 75
-    }
   }
 ]);

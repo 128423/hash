@@ -9,12 +9,10 @@ services:
     volumes: 
       - ./mongo/data:/data/db
     environment: 
-            MONGO_INITDB_ROOT_USERNAME: root
-            MONGO_INITDB_ROOT_PASSWORD: toor
             MONGO_INITDB_DATABASE: teste
 
-  go:
-    build: ./server
-    restart: always
-    ports:
-    - "50051:50051"
+  # go:
+  #   build: ./server
+  #   restart: always
+  #   ports:
+  #   - "50051:50051"
